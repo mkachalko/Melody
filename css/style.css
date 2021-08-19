@@ -60,6 +60,7 @@ body {
 	max-width: 1280px;
     margin: auto;
     padding-top: 54px;
+    padding-bottom: 99px;
     display: flex;
 }
 .main-info {
@@ -119,4 +120,58 @@ path.current-floor {
     line-height: 19px;
     padding: 16px 36px;
     cursor: pointer;
+}
+.footer {
+	background-color: #D7D7D7;
+	border-top: 4px solid #3596F5;
+}
+.footer-info {
+	max-width: 1280px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-contacts {
+	padding-left: 37px;
+	
+} 
+.footer-text {
+color: #635854;
+display: block;
+font-size: 14px;
+line-height: 16px;
+}
+.footer-phone {
+color: #635854;
+font-weight: bold;
+font-size: 17px;
+line-height: 20px;
+text-decoration: none;
+}
+.scl-networks {
+	display: flex;
+}
+.networks-item {
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+}
+.footer-other {
+	display: flex;
+}
+.other {
+	display: flex;
+	list-style: none;
+	padding-left: 355px;
+}
+.other-item {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.other-link {
+	color: #635854;
+	font-size: 16px;
+    line-height: 19px;
 }
