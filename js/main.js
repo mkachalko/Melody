@@ -4,6 +4,9 @@ $(document).ready(function () {
 	var floorPath = $(".home-image path")  //блок этажа в SVG
 	var counterUp = $(".counter-up")  //кнопка вверх
 	var counterDown = $(".counter-down")  //кнопка вниз
+	var modal = $(".modal")
+	var modalCloseButton = $(".modal-close-button")
+	var viewFlatsButton = $(".view-flats")
 
     //задаем, что при наведении мышью на блок этажа выполняется сдедующая функция
 	floorPath.on("mouseover", function() {
@@ -11,6 +14,10 @@ $(document).ready(function () {
 		currentFloor = $(this).attr('data-floor');  //меняем значение этажа на текущее по атрибуту
 		$(".counter").text(currentFloor);  //выводим значение текущего этажа на счетчик
 	})
+
+	floorPath.on('click', toggleModal); // при клике на этаж отклывает модальное окно
+	modalCloseButton.on('click', toggleModal); // при клике на кнопку "закрыть" закрывает его
+	viewFlatsButton.on('click', toggleModal);
 
     //задаем функцию при клике на кнопку вверх
 	counterUp.on("click", function(){
@@ -33,5 +40,9 @@ $(document).ready(function () {
 
 		}
 	})
+	//функция открыть/закрыть окно
+	function toggleModal() {
+		modal.toggleClass('is-open');
+	}
 
 });
